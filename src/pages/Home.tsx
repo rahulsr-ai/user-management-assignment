@@ -237,7 +237,7 @@ const Home: React.FC = () => {
                           <div className="flex items-center justify-end gap-2">
                             <button
                               onClick={() => handleEdit(user)}
-                              className="inline-flex items-center p-2 text-blue-600 hover:text-blue-800 hover:bg-blue-50 rounded-lg transition-colors duration-200"
+                              className="inline-flex items-center p-2 text-blue-600 hover:text-blue-800 hover:bg-blue-50 rounded-lg transition-colors duration-200 cursor-pointer"
                               title="Edit"
                             >
                               <HiPencil className="text-lg" />
@@ -245,7 +245,8 @@ const Home: React.FC = () => {
                             <button
                               onClick={() => handleDelete(user.id)}
                               disabled={deletingId === user.id}
-                              className={`inline-flex items-center p-2 rounded-lg transition-colors duration-200 ${
+                              className={`inline-flex items-center p-2 rounded-lg transition-colors duration-200
+                                cursor-pointer ${
                                 deletingId === user.id
                                   ? "text-gray-400 cursor-not-allowed"
                                   : "text-red-600 hover:text-red-800 hover:bg-red-50"
