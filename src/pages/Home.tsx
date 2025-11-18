@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 import {
-  FaUserPlus,
   FaSpinner,
   FaUserCircle,
   FaEnvelope,
@@ -125,10 +124,7 @@ const Home: React.FC = () => {
     });
   };
 
-  // Navigate to create user page
-  const handleCreateUser = () => {
-    navigate("/create-user");
-  };
+ 
 
   if (loading) {
     return (
@@ -155,23 +151,7 @@ const Home: React.FC = () => {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
           {/* Header Section */}
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
-            <div>
-              <h1 className="text-2xl sm:text-3xl font-semibold text-gray-900">
-                Users
-              </h1>
-              <p className="mt-1 text-sm text-gray-500">
-                Manage and view all user information
-              </p>
-            </div>
-            <button
-              onClick={handleCreateUser}
-              className="inline-flex items-center justify-center px-4 py-2.5 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200 shadow-sm hover:shadow-md"
-            >
-              <FaUserPlus className="mr-2 text-sm" />
-              Add User
-            </button>
-          </div>
+          
 
           {/* Desktop Table View */}
           <div className="hidden md:block bg-white shadow-sm rounded-lg border border-gray-200 overflow-hidden">
